@@ -1,0 +1,32 @@
+.img-item {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border: 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px;
+}
+.collection-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+}
+.delete-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 15px;
+    left: calc(100% - 15px);
+    z-index: 1;
+    display: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.img-item:hover .delete-icon {
+    display: block
+}

@@ -1,0 +1,23 @@
+.scene-container {
+    height: 60vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-name {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(to right, #77d8d8, #fa9191, #77d8d8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke : .4px black;
+}
+.app-love-icon {
+    height: 120px;
+    width: 120px;
+}

@@ -1,0 +1,21 @@
+.notiCardRead {
+    display: flex;  
+    padding: 10px;
+    margin: 2px;
+}
+.notiCardUnread {
+    display: flex;  
+    padding: 10px;
+    margin: 2px;
+    background: rgb(216, 246, 248) !important;
+}
+.notiImg {
+    height: 80px;
+    width: 100px;
+}
+.notiContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

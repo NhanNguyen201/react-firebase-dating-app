@@ -1,0 +1,14 @@
+.loading-card {
+    margin: 150px auto;
+    padding: 0;
+    height: 150px;
+    width: 400px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 13px 2px #cfcfcf;
+}

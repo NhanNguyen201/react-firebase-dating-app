@@ -1,0 +1,21 @@
+.slide-container, .swiper-container, .swiper-wrapper, img.swiper-slide ,img.swiper-slide.swiper-slide-active {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    top: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination-bullet {
+    width: 100px;
+    height: 6px;
+    border-radius: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background: rgba(0, 188, 212, .85);
+}
