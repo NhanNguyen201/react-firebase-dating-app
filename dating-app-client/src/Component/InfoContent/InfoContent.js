@@ -12,7 +12,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import './InfoContent.css';
 import MyBtn from '../../Util/MyBtn';
-const InfoContent = ({ userName, loading, getOneUser, notiPerson, like_user_in_noti, dislike_user_in_noti}) => {
+const InfoContent = ({ userName, loading, getOneUser, notiPerson,peopleItem, like_user_in_noti, dislike_user_in_noti}) => {
     useEffect(() => {
         getOneUser(userName)
         // eslint-disable-next-line
@@ -63,9 +63,9 @@ const InfoContent = ({ userName, loading, getOneUser, notiPerson, like_user_in_n
                     { loading || !notiPerson.imageCollection || notiPerson.imageCollection.length === 0  
                         ? (
                             <>
-                                <Skeleton variant="rect" height={80} width={80} />
-                                <Skeleton variant="rect" height={80} width={80} />
-                                <Skeleton variant="rect" height={80} width={80} />
+                                <Skeleton variant="rect" height={75} width={75} />
+                                <Skeleton variant="rect" height={75} width={75} />
+                                <Skeleton variant="rect" height={75} width={75} />
                             </>
                         )
                         : (
@@ -84,7 +84,7 @@ const InfoContent = ({ userName, loading, getOneUser, notiPerson, like_user_in_n
                                 <Skeleton variant="circle" height={30} width={30} className="icon-noti"/>
                                 <Skeleton variant="circle" height={30} width={30} className="icon-noti"/>
                             </>
-                        ) : (
+                        ) : peopleItem.userName !== notiPerson.userName ? (
                             <>
                                 <MyBtn
                                     onClick={likeUserInNoti}
@@ -102,7 +102,7 @@ const InfoContent = ({ userName, loading, getOneUser, notiPerson, like_user_in_n
                                     <NotInterestedIcon/>
                                 </MyBtn>
                             </>
-                        )
+                        ) : null
                     }
                 </div>
             </div>
@@ -120,7 +120,8 @@ InfoContent.propTypes = {
 }
 const mapStateToProps = state => ({
     loading: state.data.loading,
-    notiPerson: state.data.notiPerson
+    notiPerson: state.data.notiPerson,
+    peopleItem: state.data.peopleItem
 })
 
 export default connect(mapStateToProps, { getOneUser, like_user_in_noti, dislike_user_in_noti })(InfoContent) ;

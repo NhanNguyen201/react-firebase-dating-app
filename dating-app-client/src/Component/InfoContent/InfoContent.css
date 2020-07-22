@@ -1,5 +1,5 @@
 .notiPersonCard {
-    width: 400px;
+    width: 340px;
     height: 700px;
 }
 .cardHeader {
@@ -39,8 +39,8 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 .notiCollectionImg {
-    height: 80px;
-    width: 80px;
+    height: 75px;
+    width: 75px;
     object-fit: cover;
     object-position: center;
     margin: 10px;

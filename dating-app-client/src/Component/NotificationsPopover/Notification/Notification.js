@@ -22,10 +22,8 @@ const Notification = ({ notification }) => {
                 title="Noti icon"
             />          
             <CardContent className="notiContent">
-                <div>
-                    <Typography variant="body1">{notification.body}</Typography>
-                    <Typography variant="caption"><ScheduleIcon style={{transform: 'translateY(25%)'}}/>   {dayjs(notification.createdAt).fromNow()}</Typography>
-                </div>
+                <Typography variant="body1">{notification.body}</Typography>
+                <Typography variant="caption"><ScheduleIcon style={{transform: 'translateY(25%)'}}/>   {dayjs(notification.createdAt).fromNow()}</Typography>
                 <InfoCard userName={notification.sender} className="notiInfoCard"/>
             </CardContent>
         </Card>

@@ -104,6 +104,7 @@ exports.getUsers = (req, res) => {
                 if( doc.data().gender == req.user.seek 
                     && doc.data().seek == req.user.gender
                     && doc.data().role == req.user.role
+                    && doc.data().userName !== req.user.userName
                 ){
                     peopleList.push(doc.data())
                 }
@@ -271,6 +272,7 @@ exports.likeUser = (req, res) => {
 }
 
 exports.dislikeUser = (req, res) => {
+    if(req.user.userName == req.params.userName) return res.status(400).json({error: "Cannot dislike yourself"});
     const likeDoc = db
         .collection('like')
         .where('user', '==', req.user.userName)
